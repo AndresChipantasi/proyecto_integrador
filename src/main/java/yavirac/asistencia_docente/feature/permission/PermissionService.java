@@ -1,5 +1,7 @@
 package yavirac.asistencia_docente.feature.permission;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,5 +29,9 @@ public class PermissionService {
 
     public void deleteById(long id){
         permissionRepository.deleteById(id);
+    }
+
+    public List<Permission> findAll(){
+        return permissionRepository.findAll();
     }
 }
