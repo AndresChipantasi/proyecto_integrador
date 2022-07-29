@@ -57,5 +57,9 @@ public class PermissionController {
     public List<Permission> findAll(){
         return permissionService.findAll();
     }
-
+    
+    @GetMapping("/findByDescription/{term}")
+    public List<Permission> findByDescription(@PathVariable String term){
+        return permissionService.findByDescription(term);
+    }
 }

@@ -34,4 +34,9 @@ public class PermissionService {
     public List<Permission> findAll(){
         return permissionRepository.findAll();
     }
+    
+    public List<Permission> findByDescription(String term){
+        return permissionRepository.findByDescriptionLikeIgnoreCase(term);
+    }
+
 }
