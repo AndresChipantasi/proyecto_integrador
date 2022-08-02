@@ -36,7 +36,7 @@ public class PermissionService {
     }
     
     public List<Permission> findByDescription(String term){
-        return permissionRepository.findByDescriptionLikeIgnoreCase(term);
+        return permissionRepository.findByDescriptionLikeIgnoreCase(term+"%");
     }
 
 }
