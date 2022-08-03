@@ -14,8 +14,10 @@ public class Activity {
 
     @Id
     @Column("activity_id")
-    private Long activityId;
+    private long activityId;
+    @Column("user_name")
     private String userName;
+    @Column("name_activity")
     private String nameActivity;
     private String description;
     private Timestamp date;
