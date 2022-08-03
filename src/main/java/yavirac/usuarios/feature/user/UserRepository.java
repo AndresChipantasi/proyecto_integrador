@@ -13,7 +13,7 @@ public interface UserRepository extends CrudRepository<User, Long>{
     @Query("select * from users where archived = true")
     List<User> findArchived();
 
-    List<User> findByNameLikeIgnoreCase(String term);
+    List<User> findByUsernameLikeIgnoreCase(String term);
 
 }
     

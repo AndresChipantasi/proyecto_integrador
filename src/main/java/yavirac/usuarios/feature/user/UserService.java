@@ -20,7 +20,7 @@ public class UserService {
         return userRepository.findAll();
     }
     public List<User> findByName(String term){
-        return userRepository.findByNameLikeIgnoreCase(term+"%");
+        return userRepository.findByUsernameLikeIgnoreCase(term+"%");
     }
 
     public List<User> findArchived() {
