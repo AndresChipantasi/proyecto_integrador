@@ -33,9 +33,9 @@ public class ActivityController {
     }
 
     @PutMapping("/update")
-    public Activity update(@RequestBody  Activity Activity){
+    public Activity update(@RequestBody  Activity activity){
 
-    return activityService.save(Activity);
+    return activityService.save(activity);
     }
 
     @DeleteMapping("/delete/{id}")
