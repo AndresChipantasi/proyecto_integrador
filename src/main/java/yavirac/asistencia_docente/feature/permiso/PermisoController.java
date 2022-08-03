@@ -1,5 +1,7 @@
 package yavirac.asistencia_docente.feature.permiso;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -40,5 +42,13 @@ public class PermisoController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id){
         permisoService.deleteById(id);
+    }
+    @GetMapping("/findAll")
+    public List<Permiso> findAll(){
+        return permisoService.findAll();
+    }
+    @GetMapping("/findByName/{term}")
+    public List<Permiso> findByName(@PathVariable String term){ //Mapea desde la URL con PathVariable
+        return permisoService.findByName(term);
     }
 }
