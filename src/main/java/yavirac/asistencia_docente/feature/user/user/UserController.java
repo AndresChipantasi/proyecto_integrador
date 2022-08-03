@@ -1,4 +1,4 @@
-package yavirac.usuarios.feature.person;
+package yavirac.asistencia_docente.feature.user.user;
 
 import java.util.List;
 
@@ -15,43 +15,43 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/person")
+@RequestMapping("/api/user")
 @CrossOrigin({"*"})
 
-public class PersonController {
+public class UserController {
     
     @Autowired
-    PersonService personService;
+    UserService userService;
 
     
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Person save(@RequestBody Person person){
-        return personService.save(person);
+    public User save(@RequestBody User user){
+        return userService.save(user);
     }
     
     @GetMapping("/{id}")
-    public Person findById(@PathVariable Long id) {
-        return personService.findById(id);
+    public User findById(@PathVariable Long id) {
+        return userService.findById(id);
     }
 
     @GetMapping("/findAll")
-    public List<Person> findAll() {
-        return personService.findAll();
+    public List<User> findAll() {
+        return userService.findAll();
     }
 
     @GetMapping("/findByName/{term}")
-    public List<Person> findByName(@PathVariable String term){
-        return personService.findByName(term);
+    public List<User> findByName(@PathVariable String term){
+        return userService.findByName(term);
     }
 
     @GetMapping("/findArchived")
-    public List<Person> findArchived() {
-        return personService.findArchived();
+    public List<User> findArchived() {
+        return userService.findArchived();
     }
 
     @PutMapping("/update")
-    public Person update(@RequestBody Person usuario) {
-        return personService.save(usuario);
+    public User update(@RequestBody User usuario) {
+        return userService.save(usuario);
     }
 }

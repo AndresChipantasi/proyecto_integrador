@@ -1,4 +1,4 @@
-package yavirac.usuarios.feature.user;
+package yavirac.asistencia_docente.feature.user.person;
 
 import java.sql.Timestamp;
 
@@ -9,19 +9,20 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data
-@Table("users")
-public class User {
+@Table("persons")
+public class Person {
 
     @Id
-    @Column("user_id")
-    private long userId;
-    private String username;
+    @Column("person_id")
+    private long personId;
+    private String dni;
+    private String name;
     private String email;
+    private String username;
     private String password;
     private Timestamp created;
     private Timestamp updated;
     private boolean enabled;
-    private Long personId;
     private Long rolId;
     private boolean archived;
 }
