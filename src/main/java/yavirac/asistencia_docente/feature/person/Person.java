@@ -1,4 +1,4 @@
-package yavirac.asistencia_docente.feature.user.person;
+package yavirac.asistencia_docente.feature.person;
 
 import java.sql.Timestamp;
 
