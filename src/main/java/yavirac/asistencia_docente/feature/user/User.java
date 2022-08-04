@@ -10,7 +10,6 @@ import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.Data;
-import yavirac.asistencia_docente.feature.person.Person;
 
 @Data
 @Table("users")
@@ -25,10 +24,10 @@ public class User {
     private Timestamp created;
     private Timestamp updated;
     private boolean enabled;
-    @Column("person_id")
-    private Long personId;
     private boolean archived;
+    @Column("person_id")
+    private long personId;
 
-    @MappedCollection(idColumn = "person_id")
-    private Set<Person> person = new HashSet<>();
+    @MappedCollection(idColumn = "user_id")
+    private Set<UserPermission> permissions = new HashSet<>();
 }
