@@ -1,4 +1,4 @@
-package yavirac.usuarios.feature.rol;
+package yavirac.asistencia_docente.feature.rol;
 
 import org.springframework.data.annotation.Id;
 
