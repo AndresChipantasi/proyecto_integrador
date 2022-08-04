@@ -30,7 +30,7 @@ public class UserController {
         return userService.save(user);
     }
     
-    @GetMapping("/{id}")
+    @GetMapping("/findById/{id}")
     public User findById(@PathVariable Long id) {
         return userService.findById(id);
     }
