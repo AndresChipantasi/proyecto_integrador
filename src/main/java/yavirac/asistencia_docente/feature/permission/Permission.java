@@ -30,4 +30,6 @@ public class Permission {
     private boolean enabled;
 
     private boolean archive;
+
+    private Long permisoId;
 }
