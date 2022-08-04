@@ -11,7 +11,7 @@ import lombok.Data;
 public class UserPermission {
 
     @Id
-    @Column("users_permissions")
+    @Column("users_permissions_id")
     private long userPermissionId;
     @Column("user_id")
     private long userId;
