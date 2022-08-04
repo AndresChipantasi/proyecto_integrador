@@ -1,4 +1,4 @@
-package yavirac.asistencia_docente.feature.permiso;
+package yavirac.asistencia_docente.feature.tipopermisos;
 
 import java.util.List;
 

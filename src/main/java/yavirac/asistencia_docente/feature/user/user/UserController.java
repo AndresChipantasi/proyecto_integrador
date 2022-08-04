@@ -51,7 +51,7 @@ public class UserController {
     }
 
     @PutMapping("/update")
-    public User update(@RequestBody User usuario) {
-        return userService.save(usuario);
+    public User update(@RequestBody User user) {
+        return userService.save(user);
     }
 }
