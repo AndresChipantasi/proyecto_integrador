@@ -1,4 +1,4 @@
-package yavirac.usuarios.feature.person;
+package yavirac.asistencia_docente.feature.person;
 
 import java.util.List;
 

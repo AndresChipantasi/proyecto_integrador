@@ -1,4 +1,4 @@
-package yavirac.usuarios.feature.user;
+package yavirac.asistencia_docente.feature.user;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public class UserController {
         return userService.save(user);
     }
     
-    @GetMapping("/{id}")
+    @GetMapping("/findById/{id}")
     public User findById(@PathVariable Long id) {
         return userService.findById(id);
     }
@@ -51,7 +51,7 @@ public class UserController {
     }
 
     @PutMapping("/update")
-    public User update(@RequestBody User usuario) {
-        return userService.save(usuario);
+    public User update(@RequestBody User user) {
+        return userService.save(user);
     }
 }

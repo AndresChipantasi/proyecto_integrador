@@ -1,4 +1,4 @@
-package yavirac.usuarios.feature.person;
+package yavirac.asistencia_docente.feature.person;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public class PersonController {
         return personService.save(person);
     }
     
-    @GetMapping("/{id}")
+    @GetMapping("/findById/{id}")
     public Person findById(@PathVariable Long id) {
         return personService.findById(id);
     }
