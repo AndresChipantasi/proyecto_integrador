@@ -30,7 +30,7 @@ public class PersonController {
         return personService.save(person);
     }
     
-    @GetMapping("/findById/{id}")
+    @GetMapping("/{id}")
     public Person findById(@PathVariable Long id) {
         return personService.findById(id);
     }

@@ -30,7 +30,7 @@ public class UserController {
         return userService.save(user);
     }
     
-    @GetMapping("/findById/{id}")
+    @GetMapping("/{id}")
     public User findById(@PathVariable Long id) {
         return userService.findById(id);
     }
@@ -51,7 +51,7 @@ public class UserController {
     }
 
     @PutMapping("/update")
-    public User update(@RequestBody User user) {
-        return userService.save(user);
+    public User update(@RequestBody User usuario) {
+        return userService.save(usuario);
     }
 }

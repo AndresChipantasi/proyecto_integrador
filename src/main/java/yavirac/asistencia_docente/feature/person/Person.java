@@ -1,4 +1,5 @@
 package yavirac.asistencia_docente.feature.person;
+
 import java.sql.Timestamp;
 
 import org.springframework.data.annotation.Id;
@@ -16,8 +17,12 @@ public class Person {
     private long personId;
     private String dni;
     private String name;
+    private String email;
+    private String username;
+    private String password;
     private Timestamp created;
     private Timestamp updated;
     private boolean enabled;
+    private Long rolId;
     private boolean archived;
 }
